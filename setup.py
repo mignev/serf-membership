@@ -17,7 +17,7 @@ def read(fname):
 
 distutils.core.setup(name='serf_membership',
       version=version,
-      description='This is very simle script for election a leader (primary) from all members tagget with specific role.',
+      description='This is very simple script for election a leader (primary) from all members tagged with specific role.',
       author='Marian Ignev',
       author_email='m@ignev.net',
       url='https://github.com/mignev/serf-membership',
