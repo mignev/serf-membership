@@ -15,9 +15,8 @@ Based on these 2 tags `serf_membership` select single master from `role` group.
 ## Usage Example
 
 ```python
-from serf_membership.client import SerfMembership
-members = SerfMembership(role="web")
-members.primary()
+>>> from serf_membership.client import SerfMembership
+>>> members = SerfMembership(role="web")
 >>> members.primary()
 {'Status': 'alive', 'DelegateCur': 4, 'Addr': '127.0.0.1', 'Tags': {'startedat': 999999999999999, 'role': 'web', 'dc': 'dc1'}, 'ProtocolMax': 3, 'DelegateMin': 2, 'ProtocolMin': 1, 'ProtocolCur': 2, 'Port': 7946, 'DelegateMax': 4, 'Name': 'os3-2.devnodes.eu-bg-sof.startappcloud.com'}
 ```
