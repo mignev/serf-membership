@@ -1,6 +1,6 @@
 help:
-	@echo "   install      to install SerfMembership"
-	@echo "   uninstall    to uninstall SerfMembership"
+	@echo "   install      to install serf_membership"
+	@echo "   uninstall    to uninstall serf_membership"
 	@echo "   clean        to clean build files"
 	@echo "   deploy       to deploy new version on github and pypi"
 
@@ -13,7 +13,7 @@ uninstall: clean
 	@sudo rm installed_files.txt
 
 clean:
-	@sudo rm -rf SerfMembership.egg*
+	@sudo rm -rf serf_membership.egg*
 	@sudo rm -rf dist
 	@sudo rm -rf build
 	@find . -name *.pyc -type f -exec rm {} \;

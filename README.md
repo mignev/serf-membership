@@ -8,7 +8,7 @@ This is very simple script for election a leader (primary) from all members tagg
 If you want to use this you should add 2 tags to every `serf agent`:
 
 1. role
-2. startedat // unixtimestamp
+2. startedat // unixtimestamp `date +%Y%m%d%H%M%S%s%N`
 
 Based on these 2 tags `serf_membership` select single master from `role` group.
 
@@ -18,7 +18,13 @@ Based on these 2 tags `serf_membership` select single master from `role` group.
 >>> from serf_membership.client import SerfMembership
 >>> members = SerfMembership(role="web")
 >>> members.primary()
-{'Status': 'alive', 'DelegateCur': 4, 'Addr': '127.0.0.1', 'Tags': {'startedat': 999999999999999, 'role': 'web', 'dc': 'dc1'}, 'ProtocolMax': 3, 'DelegateMin': 2, 'ProtocolMin': 1, 'ProtocolCur': 2, 'Port': 7946, 'DelegateMax': 4, 'Name': 'os3-2.devnodes.eu-bg-sof.startappcloud.com'}
+{'Status': 'alive', 'DelegateCur': 4, 'Addr': '127.0.0.1', 'Tags': {'startedat': 999999999999999999999999, 'role': 'web', 'dc': 'dc1'}, 'ProtocolMax': 3, 'DelegateMin': 2, 'ProtocolMin': 1, 'ProtocolCur': 2, 'Port': 7946, 'DelegateMax': 4, 'Name': 'os3-2.devnodes.eu-bg-sof.startappcloud.com'}
+```
+
+## Serf run example
+
+```
+/usr/local/bin/serf agent -config-dir=/etc/serf/ -tag startedat=`date +%Y%m%d%H%M%S%s%N`
 ```
 
 # Installation

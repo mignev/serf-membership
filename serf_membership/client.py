@@ -16,7 +16,7 @@ class SerfMembership:
             self.members = members
 
         for member in self.members:
-            member['Tags']['startedat'] = int(member['Tags'].get('startedat', 999999999999999))
+            member['Tags']['startedat'] = int(member['Tags'].get('startedat', 999999999999999999999999))
 
     def primary(self):
         oldest_member = {}
